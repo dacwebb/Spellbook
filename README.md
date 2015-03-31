@@ -16,7 +16,7 @@ Web Applet that contains spells and abilities for the popular tabletop role-play
 
 ### Datatypes and Structures:
 
-  ##### Spell Datatype
+  ###### Spell Datatype
   1. Casting Time (String)
   2. Range "(Int) feet"
   3. Components ([VSM]{1,3})
