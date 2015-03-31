@@ -1,21 +1,22 @@
-# Generic Empty ReadMe File
----
+# SpellBook
 
 Web Applet that contains spells and abilities for the popular tabletop role-playing game Dungeons & Dragons.
 
-**Functional Reqs:**
-
-  User can search by name of ability/spell
+### Functional Reqs:
+#### UI
+  * User can search by name of ability/spell
   OR user can search by class and level of character.
+  * User can expand details of abilities once found through searching.
+  * Desktop and Mobile-friendly application.
 
-  User can expand details of abilities once found through searching.
+#### Web Server
+  * Depends on Stack we want to use. See [suggested stacks below](#possible-stacks)
+  * Linux/Unix host _(since they are free)_
+---
 
-  Desktop and Mobile-friendly application.
+### Datatypes and Structures:
 
-**Variable Fields:**
-
-  Spell Datatype
-
+  ##### Spell Datatype
   1. Casting Time (String)
   2. Range "(Int) feet"
   3. Components ([VSM]{1,3})
@@ -26,8 +27,9 @@ Web Applet that contains spells and abilities for the popular tabletop role-play
   8. Spell Class (String[])
   9. Ritual (Bool)
   10. Spell School (String)
+---
 
-**Milstones**
+### Milestones:
   1. Mockups of Search Page
     * Moblie Mockup
     * Desktop Mockup
@@ -48,3 +50,20 @@ Web Applet that contains spells and abilities for the popular tabletop role-play
     * Tests
       * User input (i.e. text boxes, checkbox)
       * Loading efficiency
+---
+
+### Possible Stacks:
+
+#### Fullstacks
+  * Meteor.js
+  * MEAN.io
+
+##### Frontend (HTML,JS)
+  * Bootstrap, Foundation, Angular
+##### Database
+  * MongoDB, mySQL, postGres, sqlLite
+##### Web Server(HTTP/HTTPS)
+  * Node.js, Apache, Nginx
+##### Host
+  * CentOS, Ubuntu, RedHat, AmazonDistro
+  * AWS (Amazon cloud service), self hosted
