@@ -27,7 +27,7 @@ Web Applet that contains spells and abilities for the popular tabletop role-play
   8. Spell Class (String[])
   9. Ritual (Bool)
   10. Spell School (String)
----
+
 
 ### Milestones:
   1. Mockups of Search Page
