@@ -12,11 +12,13 @@ Web Applet that contains spells and abilities for the popular tabletop role-play
 #### Web Server
   * Depends on Stack we want to use. See [suggested stacks below](#possible-stacks)
   * Linux/Unix host _(since they are free)_
+
 ---
 
 ### Datatypes and Structures:
 
-  ###### Spell Datatype
+##### Spell Datatype
+
   1. Casting Time (String)
   2. Range "(Int) feet"
   3. Components ([VSM]{1,3})
