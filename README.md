@@ -58,8 +58,8 @@ Web Applet that contains spells and abilities for the popular tabletop role-play
   * Meteor.js
   * MEAN.io
 
-##### Frontend (HTML,JS)
-  * Bootstrap, Foundation, Angular
+##### Frontend (HTML,JS,CSS)
+  * Bootstrap, Foundation, Angular, typeface.js, LiveValidation
 ##### Database
   * MongoDB, mySQL, postGres, sqlLite
 ##### Web Server(HTTP/HTTPS)
