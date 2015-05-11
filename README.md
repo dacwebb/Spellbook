@@ -61,10 +61,18 @@ Web Applet that contains spells and abilities for the popular tabletop role-play
 
 ##### Frontend (HTML,JS,CSS)
   * Bootstrap, Foundation, Angular, typeface.js, LiveValidation
+
 ##### Database
-  * MongoDB, mySQL, postGres, sqlLite
+  * MongoDB
+  * mySQL
+  * postGres
+  * sqlLite
+
 ##### Web Server(HTTP/HTTPS)
-  * Node.js, Apache, Nginx
+  * Node.js
+  * Apache
+  * Nginx
+
 ##### Host
   * CentOS, Ubuntu, RedHat, AmazonDistro
   * AWS (Amazon cloud service), self hosted
