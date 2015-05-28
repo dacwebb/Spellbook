@@ -1,1 +1,22 @@
 /* CSS declarations go here */
+form {
+                width:500px;
+                margin:50px auto;
+}
+.search {
+                padding: 4px 4px;
+                background:rgba(50, 50, 50, 0.2);
+                border:0px solid #dbdbdb;
+}
+.button {
+                position:relative;
+                padding:20px 20px;
+                left:-8px;
+                border:6px solid #207cca;
+                background:#207cca;
+                color:#fafafa;
+}
+.button:hover  {
+                background:#fafafa;
+                color:#207cca;
+}
