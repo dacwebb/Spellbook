@@ -2,27 +2,55 @@ Spells = new Mongo.Collection("spells");
 
 if (Meteor.isClient) {
   // This code only runs on the client
+  //Spells.insert(JSON.parse(Assets.getText('default.json')));
+
+
   Template.body.helpers({
     spells: function () {
       return Spells.find({}, {sort: {createdAt: -1}});
+    },
+    search_by_name: function() {
+      return Spells.find({name: { $regex: '^'+Session.get('search_text')+".*", $options: "i"}}, {sort: {name: 1}});
     }
   });
 
   //Form for adding items (spells)
   // Inside the if (Meteor.isClient) block, right after Template.body.helpers:
   Template.body.events({
+    /*
+    $('#submitb').click(function(){
+      $('new-spells').each(function(){
+        $(this).submit();
+      });
+    });
+    */
     "submit .new-spells": function (event) {
       // This function is called when the new spell form is submitted
-
-      var text = event.target.text.value;
-
+      var spell = {
+        name: event.target.name.value,
+        level: event.target.level.value,
+        school: event.target.school.value
+      };
       Spells.insert({
-        text: text,
-        createdAt: new Date() // current time
+          name: spell.name, 
+          level: spell.level, 
+          school: spell.school
       });
+      console.log(spell);
 
       // Clear form
       event.target.text.value = "";
+
+      // Prevent default form submit
+      return false;
+    },
+    "submit .search_by_name":function(event) {
+
+
+      Session.set('search_text', event.target.text.value);
+
+      // Clear form
+      // event.target.text.value = "";
 
       // Prevent default form submit
       return false;

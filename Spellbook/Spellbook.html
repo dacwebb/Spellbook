@@ -9,16 +9,24 @@
 
   <!-- add a form below the h1 -->
   <form class="new-spells">
-    <input type="text" name="text" placeholder="Type to add new spells" />
+    <input type="text" name="name" placeholder="Spell Name" /><br>
+    <input type="text" name="level" placeholder="Spell Level" /><br>
+    <input type="text" name="school" placeholder="Spell School" /><br>
+    <button name="submitb">Submit</button>
+  </form>
+  
+  <form class="search_by_name">
+  Search
+    <input type="text" name="text" placeholder="Search for a spell" />
   </form>
 </header>
 
-
     <ul>
-      {{#each spells}}
+      {{#each search_by_name}}
         {{> spell}}
       {{/each}}
     </ul>
+
   </div>
 </body>
 
@@ -27,10 +35,10 @@
    <button class="delete">&times;</button>
    <input type="checkbox" checked="{{checked}}" class="toggle-checked" />
 
-   <span class="text">{{text}}</span>
+   <span class="text">{{name}}</span>
    <span class="text"> - </span>
    <span class="text">Lv {{level}}</span>
    <span class="text"> - </span>
-   <span class="text">{{details}}</span>
+   <span class="text">{{school}}</span>
   </li>
 </template>

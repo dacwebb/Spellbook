@@ -1,4 +1,4 @@
-# SpellBook
+# SpellBook as a Player Tool
 
 Web Applet that contains spells and abilities for the popular tabletop role-playing game Dungeons & Dragons.
 
@@ -18,7 +18,7 @@ Web Applet that contains spells and abilities for the popular tabletop role-play
 ### Datatypes and Structures:
 
 ##### Spell Datatype
-
+  Fifth Edition
   1. Casting Time (String)
   2. Range "(Int) feet"
   3. Components ([VSM]{1,3})
