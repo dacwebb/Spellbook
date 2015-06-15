@@ -7,38 +7,58 @@
     <header>
   <h1>Spellbook</h1>
 
-  <!-- add a form below the h1 -->
+  <!-- New spell adding form and searching form respectively -->
   <form class="new-spells">
-    <input type="text" name="name" placeholder="Spell Name" /><br>
-    <input type="text" name="level" placeholder="Spell Level" /><br>
-    <input type="text" name="school" placeholder="Spell School" /><br>
+
+    <!-- TO DO : Allow two input fields per line. Looks nicer. -->
+    <input class=".noEnterSubmit" type="text" name="name" placeholder="Spell Name" />
+    <input class=".noEnterSubmit" type="text" name="level" placeholder="Spell Level" />
+    <input class=".noEnterSubmit" type="text" name="school" placeholder="Spell School" />
+    <input class=".noEnterSubmit" type="text" name="casttime" placeholder="Casting Time" />
     <button name="submitb">Submit</button>
-  </form>
-  
+  </form><br><br>
+
   <form class="search_by_name">
   Search
     <input type="text" name="text" placeholder="Search for a spell" />
   </form>
 </header>
 
+<!-- Formatting for details of spells -->
+<style>
+  div.left {padding-left: 20px}
+</style>
+<!-- End of Formatting -->
+
+
+
+<!-- Listing of spell search results -->
     <ul>
       {{#each search_by_name}}
         {{> spell}}
       {{/each}}
     </ul>
-
+<!-- End of Listing -->
   </div>
 </body>
+
+
 
 <template name="spell">
   <li class="{{#if checked}}checked{{/if}}">
    <button class="delete">&times;</button>
-   <input type="checkbox" checked="{{checked}}" class="toggle-checked" />
 
-   <span class="text">{{name}}</span>
-   <span class="text"> - </span>
-   <span class="text">Lv {{level}}</span>
-   <span class="text"> - </span>
-   <span class="text">{{school}}</span>
+   <details>
+     <summary>
+      <span class="text">{{name}}</span>
+      <span class="text"> - </span>
+      <span class="text">Level : {{level}}</span>
+     </summary>
+     <div class="left">
+       <span class="text">Spell School : {{school}}</span><br>
+       <span class="text">Casting Time : {{casttime}}</span>
+     </div>
+   </details>
+
   </li>
 </template>

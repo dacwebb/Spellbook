@@ -1,8 +1,8 @@
 /* CSS declarations go here */
 body {
   font-family: sans-serif;
-  background-color: #FFFFFF;
-  background-image: linear-gradient(to top, #FFFFFF, #FFAAAA 100%);
+  background-color: #666699;
+  background-image: linear-gradient(to center, #666699, #FFFFFF 10%);
   background-attachment: fixed;
 
   position: absolute;
@@ -25,8 +25,8 @@ body {
 }
 
 header {
-  background: #FFAAAA;
-  background-image: linear-gradient(to bottom, #FFAAAA, #FFFFFF 100%);
+  background: #666699;
+  background-image: linear-gradient(to bottom, #666699, #FFFFFF 100%);
   padding: 20px 15px 15px 15px;
   position: relative;
   text-align: center;
@@ -37,11 +37,11 @@ header {
 }
 
 h1 {
-  font-size: 1.5em;
+  font-size: 2em;
   margin: 0;
   margin-bottom: 10px;
   display: inline-block;
-  margin-right: 1em;
+  margin-right: 0em;
 }
 
 form {
@@ -50,17 +50,25 @@ form {
   position: relative;
 }
 
-.new-spell input {
-  box-sizing: border-box;
-  padding: 10px 0;
-  background: transparent;
+.new-spells input {
+  background-color: rgba(255, 255, 255, .8);;
+  font-weight: bold;
+  box-sizing:content-box;
+  padding: 2px 0px;
+  padding-top: 6px;
+  padding-bottom: 6px;
   border: none;
   width: 100%;
-  padding-right: 80px;
+  padding-right: 0px;
   font-size: 1em;
+  text-align: center;
+}
+.new-spells button {
+  padding: 5px 0;
+  padding-right: 0px;
 }
 
-.new-spell input:focus{
+.new-spells input:focus{
   outline: 0;
 }
 
@@ -124,4 +132,25 @@ header .hide-completed {
   .new-spell input {
     padding-bottom: 5px;
   }
+}
+
+summary::-webkit-details-marker {
+  display: none
+}
+summary:after {
+  background: white;
+  border-radius: 5px;
+  content: "+";
+  color: #aaa;
+  float: left;
+  font-size: 1.3em;
+  font-weight: bold;
+  margin: 0px 5px 0 0;
+  padding: 10;
+  text-align: center;
+  width: 15px;
+}
+details[open] summary:after {
+  content: "-";
+  padding-left: 10;
 }

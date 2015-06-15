@@ -29,12 +29,17 @@ if (Meteor.isClient) {
       var spell = {
         name: event.target.name.value,
         level: event.target.level.value,
-        school: event.target.school.value
+        school: event.target.school.value,
+        casttime: event.target.casttime.value
       };
+      $('.noEnterSubmit').keypress(function(e){
+        if ( e.which == 13 ) e.preventDefault();
+      });
       Spells.insert({
-          name: spell.name, 
-          level: spell.level, 
-          school: spell.school
+          name: spell.name,
+          level: spell.level,
+          school: spell.school,
+          casttime: spell.casttime
       });
       console.log(spell);
 
